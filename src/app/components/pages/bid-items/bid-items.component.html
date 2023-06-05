@@ -1,0 +1,55 @@
+<div class="container-scroller">
+  <app-nav-bar></app-nav-bar>
+  <div class="container-fluid page-body-wrapper">
+    <app-side-bar></app-side-bar>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="col-lg-12 grid-margin stretch-card">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">BidInfo Table</h4>
+              <div class="table-responsive">
+                <table class="table table-striped">
+                  <thead>
+                    <tr class="bg text-white">
+                      <th>#</th>
+                      <th>Bid Amount</th>
+                      <th>Bid Base Price</th>
+                      <th>Current Bid Price</th>
+                      <th>Bid Start Time</th>
+                      <th>Bid End Time</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of bidItem_list; let i = index">
+                      <td class="py-1 pad">
+                        {{ i + 1 }}
+                      </td>
+                      <td class="pad">{{ item.bidAmount }}</td>
+                      <td>
+                        <div class="pad">
+                          {{ item.baseBidPrice }}
+                        </div>
+                      </td>
+                      <td class="pad">{{ item.currentBidPrice }}</td>
+                      <td class="pad">{{ item.bidStartTime | date }}</td>
+                      <td class="pad">{{ item.bidEndTime | date }}</td>
+                      <td>
+                        <label
+                          class="badge badge-success text-dark"
+                          [routerLink]="['updateBid', item?.id]"
+                          >Edit</label
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

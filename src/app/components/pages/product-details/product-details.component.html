@@ -1,0 +1,149 @@
+<div class="container-scroller">
+  <app-nav-bar></app-nav-bar>
+  <div class="container-fluid page-body-wrapper">
+    <app-side-bar></app-side-bar>
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <div class="card">
+          <div class="row clearfix mt-1">
+            <div class="col-lg-12 col-md-12 row">
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="top_counter p-3">
+                  <div>
+                    <div
+                      id="top_counter1"
+                      class="carousel vert slide"
+                      data-ride="carousel"
+                      data-interval="2500"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <div class="content">
+                            <div class="text">
+                              <b>Dealer Name :</b>
+                              <span class="p-7">
+                                {{ productDetails?.scrapDealerName }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>Product :</b>
+                              <span class="p-7">
+                                {{ productDetails?.name }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>Bid Id :</b>
+                              <span class="p-7">
+                                {{
+                                  productDetails?.bidId
+                                    ? productDetails?.bidId
+                                    : "N/A"
+                                }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>Quantity :</b>
+                              <span class="p-7">
+                                {{ productDetails?.quantity }}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 text-center">
+                <div class="top_counter p-3">
+                  <div>
+                    <div
+                      id="top_counter1"
+                      class="carousel vert slide"
+                      data-ride="carousel"
+                      data-interval="2500"
+                    >
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <div class="content">
+                            <div class="text">
+                              <b>Dealer Id :</b>
+                              <span class="p-7">
+                                {{ productDetails?.scrapDealerId }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>MSP :</b>
+                              <span class="p-7">
+                                {{ productDetails?.msp }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>Cost Price :</b>
+                              <span class="p-7">
+                                {{ productDetails?.cp }}
+                              </span>
+                            </div>
+                          </div>
+                          <div class="content">
+                            <div class="text">
+                              <b>Sale Price :</b>
+                              <span class="p-7">
+                                {{ productDetails?.sp }}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div><hr /></div>
+            <div class="col-lg-12 col-md-12 row">
+              <div class="text-center text-primary mb-3 self">
+                <b>Images</b>
+              </div>
+              <div><hr /></div>
+              <div
+                *ngFor="let images of productDetails?.images"
+                class="col-lg-6 col-md-6 align d-flex"
+              >
+                <div class="profile-image mb-3">
+                  <img src="{{ images }}" alt="image" class="cardImg" />
+                </div>
+              </div>
+              <div><hr /></div>
+              <div class="text-center text-primary mb-3 self">
+                <b>Videos</b>
+              </div>
+              <div><hr /></div>
+              <div
+                *ngFor="let video of productDetails?.videos"
+                class="col-lg-6 col-md-6 align d-flex"
+              >
+                <div class="profile-image mb-3">
+                  <video width="320" height="240" controls>
+                    <source src="{{ video }}" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</div>
