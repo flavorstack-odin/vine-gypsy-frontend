@@ -61,9 +61,9 @@ export class LoginComponent implements OnInit {
           'userdetails',
           JSON.stringify({ user_id: data?.uid, email: data?.email })
         );
-        this.router.navigate(['uploadProduct']);
+        this.router.navigate(['dashboard']);
         this.ngZone.run(() => {
-          this.router.navigate(['/uploadProduct']);
+          this.router.navigate(['/dashboard']);
         });
       })
       .catch((error) => {

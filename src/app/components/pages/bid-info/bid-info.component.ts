@@ -33,6 +33,7 @@ export class BidInfoComponent implements OnInit {
     enableCheckAll: false,
   };
   selectButton: boolean = false;
+  date: any;
   constructor(
     private storage: AngularFireStorage,
     private formBuilder: FormBuilder,
@@ -55,6 +56,9 @@ export class BidInfoComponent implements OnInit {
   ngOnInit(): void {
     this.getFireStoreItems();
     this.getBidDetais();
+    let d = new Date();
+    this.date = d.toISOString();
+    console.log(this.date);
   }
 
   onItemSelect(item: any) {
@@ -119,6 +123,8 @@ export class BidInfoComponent implements OnInit {
         this.bidInfoForm.value['bidEnd'],
       bidInfoId: this.id.toString(),
       currentBidPrice: this.bidInfoForm.value['baseBidPrice'],
+      createdTime: this.date,
+      updatedTime: this.date,
     };
     console.log('fd', fd);
     this.firestore
@@ -226,6 +232,7 @@ export class BidInfoComponent implements OnInit {
           this.bidInfoForm.value['bidEndTime'] +
           'T' +
           this.bidInfoForm.value['bidEnd'],
+        updatedTime: this.date,
       };
       const docRef = this.firestore
         .collection('bidInfo')

@@ -27,6 +27,10 @@ export class ScrapDelarRegisterComponent implements OnInit {
   update: boolean = false;
   longitude: any;
   lattitude: any;
+  isChecked: any;
+  latt: any = '';
+  long: any = '';
+  date: any;
   constructor(
     private storage: AngularFireStorage,
     private formBuilder: FormBuilder,
@@ -38,7 +42,8 @@ export class ScrapDelarRegisterComponent implements OnInit {
     private locationService: LocationService
   ) {
     this.dealerRegisterForm = this.formBuilder.group({
-      aadhar: ['', [Validators.required, aadhaarValidator]],
+      // aadhar: ['', [Validators.required, aadhaarValidator]],
+      aadhar: ['', [Validators.required]],
       address: ['', [Validators.required]],
       company: ['', [Validators.required]],
       district: ['', [Validators.required]],
@@ -56,6 +61,9 @@ export class ScrapDelarRegisterComponent implements OnInit {
   ngOnInit(): void {
     this.getDealerDetails();
     this.getLocation();
+    let d = new Date();
+    this.date = d.toISOString();
+    console.log(this.date);
   }
   onFileChange(event: any) {
     this.file = event.target.files[0];
@@ -102,8 +110,10 @@ export class ScrapDelarRegisterComponent implements OnInit {
       uImage: this.imageUrl,
       verified: 'No',
       verifiedBy: '',
-      lng: this.longitude,
-      lat: this.lattitude,
+      lng: this.long,
+      lat: this.latt,
+      createdTime: this.date,
+      updatedTime: this.date,
     };
     // this.firestore
     //   .collection('scrapDealer')
@@ -209,6 +219,7 @@ export class ScrapDelarRegisterComponent implements OnInit {
         secondary: this.dealerRegisterForm.value['secondary'],
         uName: this.dealerRegisterForm.value['uName'],
         userId: this.dealerRegisterForm.value['userId'],
+        updatedTime: this.date,
         aadharCardImage: this.aadharUrl
           ? this.aadharUrl
           : this.dealerDetails.aadharCardImage,
@@ -230,7 +241,17 @@ export class ScrapDelarRegisterComponent implements OnInit {
     this.dealerRegisterForm.reset();
     this.router.navigate(['/dealerList']);
   }
-
+  onClick(event: any) {
+    console.log('checked', event.target.checked);
+    this.isChecked = event.target.checked;
+    if (this.isChecked) {
+      this.latt = this.lattitude;
+      this.long = this.longitude;
+    } else {
+      this.latt = '';
+      this.long = '';
+    }
+  }
   getLocation() {
     this.locationService.getPosition().then((pos) => {
       console.log(`Positon: long-${pos.lng},lat- ${pos.lat}`);

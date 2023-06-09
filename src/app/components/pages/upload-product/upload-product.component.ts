@@ -33,6 +33,7 @@ export class UploadProductComponent implements OnInit {
   productId: any = 0;
   productDetails: any;
   isupdate: boolean = false;
+  date: any;
   constructor(
     private storage: AngularFireStorage,
     private formBuilder: FormBuilder,
@@ -58,6 +59,9 @@ export class UploadProductComponent implements OnInit {
   ngOnInit(): void {
     this.fetchImages();
     this.getProductDetais();
+    let d = new Date();
+    this.date = d.toISOString();
+    console.log(this.date);
   }
 
   fetchImages() {
@@ -129,6 +133,8 @@ export class UploadProductComponent implements OnInit {
       sp: this.uploadProductForm.value['sp'],
       id: this.id.toString(),
       bidId: '',
+      createdTime: this.date,
+      updatedTime: this.date,
       images: this.savedDataImage,
       videos: this.savedDataVideo,
     };
@@ -356,6 +362,7 @@ export class UploadProductComponent implements OnInit {
         msp: this.uploadProductForm.value['msp'],
         cp: this.uploadProductForm.value['cp'],
         sp: this.uploadProductForm.value['sp'],
+        updatedTime: this.date,
         images:
           this.savedUpdateDataImage.length > 0
             ? this.savedUpdateDataImage

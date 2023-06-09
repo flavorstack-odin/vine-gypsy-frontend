@@ -62,6 +62,80 @@ export class AppServiceService {
       );
   }
 
+  getUserDetails(): Observable<any[]> {
+    return this.firestore
+      .collection('users')
+      .snapshotChanges()
+      .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: any = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        })
+      );
+  }
+  getInboundLogistics(): Observable<any[]> {
+    return this.firestore
+      .collection('inboundLogistics')
+      .snapshotChanges()
+      .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: any = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        })
+      );
+  }
+
+  getbalingUnits(): Observable<any[]> {
+    return this.firestore
+      .collection('balingUnit')
+      .snapshotChanges()
+      .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: any = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        })
+      );
+  }
+
+  getbidTxns(): Observable<any[]> {
+    return this.firestore
+      .collection('bidTxn')
+      .snapshotChanges()
+      .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: any = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        })
+      );
+  }
+
+  getOutboundLogistics(): Observable<any[]> {
+    return this.firestore
+      .collection('outboundLogistics')
+      .snapshotChanges()
+      .pipe(
+        map((actions) => {
+          return actions.map((a) => {
+            const data: any = a.payload.doc.data();
+            const id = a.payload.doc.id;
+            return { id, ...data };
+          });
+        })
+      );
+  }
+
   getDealerDetailsDocumentById(documentId: string) {
     return this.firestore.collection('scrapDealer').doc(documentId).get();
   }

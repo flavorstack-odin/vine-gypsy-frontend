@@ -33,6 +33,7 @@ import { BidItemsComponent } from './components/pages/bid-items/bid-items.compon
 import { DealerDetailsPageComponent } from './components/pages/dealer-details-page/dealer-details-page.component';
 import { ScrapDealerListComponent } from './components/pages/scrap-dealer-list/scrap-dealer-list.component';
 import { ProductDetailsComponent } from './components/pages/product-details/product-details.component';
+import { UserListComponent } from './components/pages/user-list/user-list.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ProductDetailsComponent } from './components/pages/product-details/prod
     DealerDetailsPageComponent,
     ScrapDealerListComponent,
     ProductDetailsComponent,
+    UserListComponent,
 
     // NavBarComponent,
     // SideBarComponent,
