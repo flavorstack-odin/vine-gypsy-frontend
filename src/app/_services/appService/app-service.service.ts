@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { AngularFirestore, QueryFn } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
 
 @Injectable({
@@ -144,5 +144,21 @@ export class AppServiceService {
   }
   getBidDetailsDocumentById(documentId: string) {
     return this.firestore.collection('bidInfo').doc(documentId).get();
+  }
+
+  getDocumentsWithinLast30Days(
+    collection: string,
+    createdAtField: string
+  ): Observable<any[]> {
+    const today = new Date();
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(today.getDate() - 30);
+
+    const queryFn: QueryFn = (ref: any) =>
+      ref
+        .where(createdAtField, '>=', thirtyDaysAgo)
+        .where(createdAtField, '<=', today);
+
+    return this.firestore.collection(collection, queryFn).valueChanges();
   }
 }

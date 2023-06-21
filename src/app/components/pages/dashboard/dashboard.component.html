@@ -74,6 +74,10 @@
                     </p>
                     <p *ngIf="sum">
                       <b>{{ sum }}</b> Kg (Quantity)
+                      <br />
+                      <span *ngIf="productsin30Days">
+                        <b>{{ productsin30Days.length }}</b> ( in 30 days)</span
+                      >
                     </p>
                   </div>
                 </div>
@@ -85,7 +89,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ inboundLogistics?.length }}</b>
                     </p>
-                    <!-- <p>10.00% (30 days)</p> -->
+                    <p *ngIf="inboundLogisticsin30Days">
+                      <b>{{ inboundLogisticsin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -96,9 +102,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ outboundLogistics?.length }}</b>
                     </p>
-                    <!-- <p>
-                      <b>{{ sum }}</b> Kg (Quantity)
-                    </p> -->
+                    <p *ngIf="outboundLogisticsin30Days">
+                      <b>{{ outboundLogisticsin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -110,7 +116,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ dealerDetails?.length }}</b>
                     </p>
-                    <!-- <p>22.00% (30 days)</p> -->
+                    <p *ngIf="scrapDealerin30Days">
+                      <b>{{ scrapDealerin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -123,7 +131,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ balingUnits?.length }}</b>
                     </p>
-                    <!-- <p>2.00% (30 days)</p> -->
+                    <p *ngIf="balingUnitin30Days">
+                      <b>{{ balingUnitin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -134,7 +144,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ bidItem_list?.length }}</b>
                     </p>
-                    <p>2.00% (30 days)</p>
+                    <p *ngIf="bidInfoin30Days">
+                      <b>{{ bidInfoin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -145,7 +157,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ bidTxns?.length }}</b>
                     </p>
-                    <!-- <p>2.00% (30 days)</p> -->
+                    <p *ngIf="bidTxnin30Days">
+                      <b>{{ bidTxnin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>
@@ -156,7 +170,9 @@
                     <p class="fs-30 mb-2">
                       <b>{{ user_list?.length }}</b>
                     </p>
-                    <!-- <p>2.00% (30 days)</p> -->
+                    <p *ngIf="usersin30Days">
+                      <b>{{ usersin30Days.length }} </b>(in 30 days)
+                    </p>
                   </div>
                 </div>
               </div>

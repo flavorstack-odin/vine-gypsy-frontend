@@ -34,6 +34,7 @@ export class UploadProductComponent implements OnInit {
   productDetails: any;
   isupdate: boolean = false;
   date: any;
+  d: any;
   constructor(
     private storage: AngularFireStorage,
     private formBuilder: FormBuilder,
@@ -59,8 +60,8 @@ export class UploadProductComponent implements OnInit {
   ngOnInit(): void {
     this.fetchImages();
     this.getProductDetais();
-    let d = new Date();
-    this.date = d.toISOString();
+    this.d = new Date();
+    this.date = this.d.toISOString();
     console.log(this.date);
   }
 
@@ -135,6 +136,7 @@ export class UploadProductComponent implements OnInit {
       bidId: '',
       createdTime: this.date,
       updatedTime: this.date,
+      ceatedDate: this.d,
       images: this.savedDataImage,
       videos: this.savedDataVideo,
     };
