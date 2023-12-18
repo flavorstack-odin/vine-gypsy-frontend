@@ -1,0 +1,197 @@
+.mainNav {
+  width: 100%;
+  height: 100%;
+  padding-top: 28px;
+  padding-bottom: 12px;
+  padding-left: 80px;
+  padding-right: 80px;
+  background: rgba(255, 255, 255, 0.8);
+  justify-content: space-between;
+  align-items: center;
+  display: inline-flex;
+}
+
+.navContainer {
+  flex: 1 1 0;
+  height: 75.01px;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  display: flex;
+}
+
+.navContainer2 {
+  width: 75px;
+  height: 75.01px;
+  position: relative;
+}
+
+.nav1 {
+  width: 64.48px;
+  height: 64.5px;
+  left: 5.26px;
+  top: 5.26px;
+  position: absolute;
+  /* background: #6a0919; */
+}
+
+.nav2 {
+  width: 75px;
+  height: 75.01px;
+  left: 0px;
+  top: -0px;
+  position: absolute;
+  /* background: #6a0919; */
+}
+
+.nav3 {
+  width: 6.39px;
+  height: 2.88px;
+  left: 32.95px;
+  top: 23.59px;
+  position: absolute;
+  background: #6a0919;
+}
+
+.nav4 {
+  width: 6.27px;
+  height: 3.39px;
+  left: 32.05px;
+  top: 26.79px;
+  position: absolute;
+  background: #6a0919;
+}
+
+.navItems {
+  flex: 1 1 0;
+  align-self: stretch;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 36px;
+  display: flex;
+}
+
+.home {
+  text-align: center;
+  color: #a2883e;
+  font-size: 18px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 600;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.wineries {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+
+.maindisplay {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  display: flex;
+}
+
+.itemList {
+  text-align: center;
+  color: #a8a59f;
+  font-size: 18px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+/* .evaluation {
+  text-align: center;
+  color: #a8a59f;
+  font-size: 18px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.aboutUs {
+  text-align: center;
+  color: #a8a59f;
+  font-size: 18px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  line-height: 24px;
+  word-wrap: break-word;
+} */
+
+.socialMedia {
+  width: 184px;
+  align-self: stretch;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  display: flex;
+}
+
+.socialMedia1 {
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  display: flex;
+}
+
+.socio {
+  width: 28px;
+  height: 28px;
+  position: relative;
+}
+
+.fb {
+  width: 23.33px;
+  height: 23.33px;
+  left: 2.33px;
+  top: 2.33px;
+  position: absolute;
+  /* background: #a8a59f; */
+}
+
+.insta {
+  width: 21px;
+  height: 21px;
+  left: 3.5px;
+  top: 3.5px;
+  position: absolute;
+  /* background: #a8a59f; */
+}
+
+.insta2 {
+  width: 12.36px;
+  height: 12.17px;
+  left: 8.6px;
+  top: 7.23px;
+  position: absolute;
+  /* background: #a8a59f; */
+}
+
+.twitter {
+  width: 23.33px;
+  height: 18.96px;
+  left: 2.33px;
+  top: 4.52px;
+  position: absolute;
+  /* background: #a8a59f; */
+}
+
+.whatsapp {
+  width: 21px;
+  height: 20.32px;
+  left: 3.5px;
+  top: 3.84px;
+  position: absolute;
+  /* background: #a8a59f; */
+}
+
+.hand {
+  cursor: pointer;
+}

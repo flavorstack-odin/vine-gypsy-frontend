@@ -1,0 +1,118 @@
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .main-container {
+    flex-wrap: wrap;
+  }
+}
+.title {
+  color: var(--Grey-Primary-Normal, #333232);
+  letter-spacing: -2.88px;
+  flex-grow: 1;
+  flex-basis: auto;
+  font: italic 200 48px/108% Crimson Pro, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .title {
+    font-size: 40px;
+  }
+}
+.div-3 {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  padding: 0 20px;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.div-4 {
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--Grey-Tertiary-Dark, #ddd);
+  background-color: var(--Grey-Tertiary-Light, #fff);
+  align-self: stretch;
+  display: flex;
+  aspect-ratio: 1;
+  flex-direction: column;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0 16px;
+}
+.img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  overflow: hidden;
+}
+.div-5 {
+  border-radius: 4px;
+  border: 1px solid var(--Light-Color-Base-Tertiary-Dark, #ddd);
+  background-color: var(--Grey-Tertiary-Light, #fff);
+  align-self: stretch;
+  display: flex;
+  gap: 8px;
+  padding: 14px 20px;
+}
+@media (max-width: 991px) {
+  .div-5 {
+    justify-content: center;
+  }
+}
+.img-2 {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  overflow: hidden;
+  align-self: center;
+  max-width: 100%;
+  margin: auto 0;
+}
+.div-6 {
+  color: var(--Grey-Secondary-Normal, #7c7c7c);
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -0.32px;
+  flex-grow: 1;
+  flex-basis: auto;
+  font: 400 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+.img-3 {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 20px;
+  overflow: hidden;
+  align-self: center;
+  max-width: 100%;
+  margin: auto 0;
+}
+.div-7 {
+  color: #fff;
+  letter-spacing: -0.32px;
+  white-space: nowrap;
+  border-radius: 4px;
+  background-color: var(--Ruby-300, #6a0919);
+  justify-content: center;
+  margin: auto 0;
+  padding: 10px 40px;
+  font: 600 16px/28px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-7 {
+    white-space: initial;
+    padding: 0 20px;
+  }
+}

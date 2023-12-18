@@ -1,0 +1,316 @@
+.main {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  padding: 8px 80px;
+}
+
+@media (max-width: 991px) {
+  .main {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+}
+
+.backarrowimg {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+  margin: auto 0;
+}
+
+.explore-details {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: var(--Grey-Primary-Normal, #333232);
+  font-feature-settings: "clig" off, "liga" off;
+  text-overflow: ellipsis;
+  letter-spacing: -1.28px;
+  align-self: stretch;
+  flex-grow: 1;
+  white-space: nowrap;
+  font: italic 200 32px/40px Crimson Pro, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+
+@media (max-width: 991px) {
+  .explore-details {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+
+.bigimage {
+  aspect-ratio: 3.27;
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.div {
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 80px;
+}
+@media (max-width: 991px) {
+  .div {
+    padding: 0 20px;
+  }
+}
+.div-2 {
+  align-self: stretch;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .div-2 {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+.div-3 {
+  justify-content: center;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0%;
+  flex-direction: column;
+}
+@media (max-width: 991px) {
+  .div-3 {
+    max-width: 100%;
+  }
+}
+.div-4 {
+  color: var(--Ruby-400, #4a0612);
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -2.24px;
+  font: italic 200 56px/56px Crimson Pro, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-4 {
+    max-width: 100%;
+    font-size: 40px;
+    line-height: 45px;
+  }
+}
+.div-5 {
+  color: var(--Ruby-100, #a9707a);
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -0.96px;
+  margin-top: 8px;
+  white-space: nowrap;
+  font: 200 24px/32px Crimson Pro, -apple-system, Roboto, Helvetica, sans-serif;
+}
+@media (max-width: 991px) {
+  .div-5 {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+.div-6 {
+  border-radius: 4px;
+  border: 1px solid var(--Grey-Tertiary-Dark, #ddd);
+  background-color: var(--Grey-Tertiary-Light, #fff);
+  align-self: start;
+  display: flex;
+  gap: 8px;
+  padding: 12px 24px;
+}
+@media (max-width: 991px) {
+  .div-6 {
+    padding: 0 20px;
+  }
+}
+.div-7 {
+  color: var(--Grey-Secondary-Normal, #7c7c7c);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -0.32px;
+  flex-grow: 1;
+  white-space: nowrap;
+  font: 500 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-7 {
+    white-space: initial;
+  }
+}
+.img {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 100%;
+}
+.div-8 {
+  align-self: stretch;
+  color: var(--Grey-Primary-Normal, #333232);
+  letter-spacing: -0.4px;
+  margin-top: 20px;
+  white-space: nowrap;
+  font: 600 20px/28px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-8 {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+.div-9 {
+  align-self: stretch;
+  color: var(--Grey-Secondary-Light, #ababab);
+  letter-spacing: -0.32px;
+  margin-top: 12px;
+  font: 400 16px/28px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-9 {
+    max-width: 100%;
+  }
+}
+.div-10 {
+  align-self: stretch;
+  color: var(--Grey-Primary-Normal, #333232);
+  letter-spacing: -0.4px;
+  margin-top: 20px;
+  white-space: nowrap;
+  font: 600 20px/28px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-10 {
+    max-width: 100%;
+    white-space: initial;
+  }
+}
+.div-11 {
+  align-self: stretch;
+  color: var(--Grey-Secondary-Light, #ababab);
+  letter-spacing: -0.32px;
+  margin-top: 12px;
+  font: 400 16px/28px Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-11 {
+    max-width: 100%;
+  }
+}
+.div-12 {
+  align-self: start;
+  display: flex;
+  margin-top: 20px;
+  padding-right: 23px;
+  gap: 12px;
+}
+@media (max-width: 991px) {
+  .div-12 {
+    padding-right: 20px;
+  }
+}
+.img-2 {
+  aspect-ratio: 2.5;
+  object-fit: contain;
+  object-position: center;
+  width: 80px;
+  align-items: flex-start;
+  overflow: hidden;
+  max-width: 100%;
+}
+.div-13 {
+  color: var(--Grey-Secondary-Light, #ababab);
+  letter-spacing: -0.28px;
+  align-self: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  margin: auto 0;
+  font: 400 14px/143% Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+@media (max-width: 991px) {
+  .div-13 {
+    white-space: initial;
+  }
+}
+.div-14 {
+  justify-content: center;
+  border-top: 2px solid var(--Grey-Tertiary-Normal, #edeef1);
+  align-self: start;
+  display: flex;
+  margin-top: 48px;
+  gap: 12px;
+}
+@media (max-width: 991px) {
+  .div-14 {
+    margin-top: 40px;
+  }
+}
+.div-15 {
+  justify-content: space-between;
+  border-radius: 4px;
+  border: 1px solid var(--Ruby-300, #6a0919);
+  background-color: var(--Grey-Tertiary-Light, #fff);
+  display: flex;
+  gap: 20px;
+  padding: 12px 24px;
+}
+@media (max-width: 991px) {
+  .div-15 {
+    padding: 0 20px;
+  }
+}
+.div-16 {
+  color: var(--Ruby-300, #6a0919);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -0.32px;
+  font: 500 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
+.img-3 {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 24px;
+  overflow: hidden;
+  max-width: 100%;
+}
+.div-17 {
+  justify-content: space-between;
+  border-radius: 4px;
+  background-color: var(--Ruby-300, #6a0919);
+  display: flex;
+  gap: 20px;
+  padding: 12px 24px;
+}
+@media (max-width: 991px) {
+  .div-17 {
+    padding: 0 20px;
+  }
+}
+.div-18 {
+  color: var(--Light-Color-Base-Tertiary-Light, #fff);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  letter-spacing: -0.32px;
+  font: 500 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica,
+    sans-serif;
+}
